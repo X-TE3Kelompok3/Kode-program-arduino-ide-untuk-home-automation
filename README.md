@@ -32,8 +32,16 @@ Proyek ini dibuat untuk:
 
 ---
 
-## 🗂️ Struktur File
-📦 Home Automation 
-├── 📁 src/   # Berisi kode program Arduino (.ino) │   └── home_automation.ino  # Program utama sistem otomatisasi 
-├── 📁 assets/              # Gambar atau foto alat │   └── alat.jpg            # Contoh hasil alat jadi ├── 📁 docs/                # Dokumentasi tambahan │   └── wiring-diagram.png    # Diagram rangkaian sistem 
-├── README.md      # Deskripsi dan dokumentasi proyek └── LICENSE                 # Lisensi proyek
+## 📁 Struktur File
+
+```
+📦 Home Automation  
+├── 📁 src/                      # Berisi kode program Arduino (.ino)  
+│   └── home_automation.ino      # Program utama sistem otomatisasi  
+├── 📁 assets/                   # Gambar atau foto alat  
+│   └── alat.jpg                 # Contoh hasil alat jadi  
+├── 📁 docs/                     # Dokumentasi tambahan  
+│   └── wiring-diagram.png       # Diagram rangkaian sistem  
+├── README.md                    # Deskripsi dan dokumentasi proyek  
+└── LICENSE                      # Lisensi proyek  
+```
