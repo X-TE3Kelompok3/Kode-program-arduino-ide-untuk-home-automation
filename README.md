@@ -17,7 +17,7 @@ Proyek ini merupakan tugas akhir mata pelajaran **Teknik Elektronika Industri**,
 ## 🎯 Tujuan Proyek
 
 Proyek ini dibuat untuk:
-- Menerapkan pemrograman mikrokontroler Arduino dalam kehidupan sehari-hari
+- Menerapkan pemrograman mikrokontroler dalam kehidupan sehari-hari
 - Meningkatkan efisiensi kontrol perangkat listrik rumah tangga
 - Memberikan pengalaman langsung dalam pengembangan sistem otomatisasi sederhana
 
