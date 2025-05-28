@@ -1,81 +1,35 @@
-```cpp
-#define BLYNK_TEMPLATE_ID "TMPL6B_HVmpP1"
-#define BLYNK_TEMPLATE_NAME "lamp automation"
-#define BLYNK_AUTH_TOKEN "ucs_4oe8S5nLtvKzDhhxEQDe-f2iPSat"
+# 🏠 Proyek Home Automation - Arduino IDE
 
-#include <ESP8266WiFi.h>
-#include <BlynkSimpleEsp8266.h>
-#include <TimeLib.h>
-#include <WidgetRTC.h>
+Proyek ini merupakan tugas akhir mata pelajaran **Teknik Elektronika Industri**, yang bertujuan untuk merancang dan mengimplementasikan sistem **otomatisasi rumah (home automation)** menggunakan mikrokontroler berbasis Arduino.
 
-char ssid[] = "x";
-char pass[] = "12345678";
+---
 
-#define RELAY_PIN D1
+## 📚 Informasi Umum
 
-BlynkTimer timer;
-WidgetRTC rtc;
+- **Nama Proyek** : Sistem Home Automation Berbasis Arduino
+- **Kelompok**    : Kelompok 3 - X TE 3
+- **Sekolah**     : SMKN 1 JAPARA
+- **Tahun Ajaran**: 2024/2025
+- **Guru Pembimbing**: Pak Wahyu ikhsannudin
 
-bool manualControl = false;
-int lastCheckedDay = -1;
-bool relayState = false;
+---
 
-BLYNK_WRITE(V0) {
-  int pinValue = param.asInt();
-  manualControl = true;
-  digitalWrite(RELAY_PIN, pinValue);
-  relayState = pinValue;
-  updateStatus();
-}
+## 🎯 Tujuan Proyek
 
-BLYNK_WRITE(V1) {
-  int resetValue = param.asInt();
-  if (resetValue == 1) {
-    manualControl = false;
-    updateStatus();
-  }
-}
+Proyek ini dibuat untuk:
+- Menerapkan pemrograman mikrokontroler Arduino dalam kehidupan sehari-hari
+- Meningkatkan efisiensi kontrol perangkat listrik rumah tangga
+- Memberikan pengalaman langsung dalam pengembangan sistem otomatisasi sederhana
 
-void checkSchedule() {
-  int currentHour = hour();
-  int currentMinute = minute();
-  int currentDay = day();
+---
 
-  if (currentHour == 0 && lastCheckedDay != currentDay) {
-    manualControl = false;
-    lastCheckedDay = currentDay;
-    updateStatus();
-  }
+## 🛠️ Fitur Sistem
 
-  if (manualControl) return;
+- Kontrol otomatis dan manual perangkat seperti lampu
+- Penggunaan modul relay sebagai saklar elektronik
+- Potensi integrasi dengan aplikasi kontrol jarak jauh (seperti Blynk)
+- Otomatisasi berdasarkan waktu atau kondisi (jika menggunakan sensor)
 
-  bool shouldBeOn = (currentHour >= 18 && currentHour < 22) ||
-                    (currentHour == 22 && currentMinute == 0);
+---
 
-  digitalWrite(RELAY_PIN, shouldBeOn ? HIGH : LOW);
-  relayState = shouldBeOn;
-  updateStatus();
-}
-
-void updateStatus() {
-  String modeText = manualControl ? "Manual" : "Auto";
-  String relayText = relayState ? "Relay ON" : "Relay OFF";
-  Blynk.virtualWrite(V2, relayText + " (" + modeText + ")");
-  Blynk.virtualWrite(V3, relayState ? 255 : 0);
-}
-
-void setup() {
-  Serial.begin(115200);
-  pinMode(RELAY_PIN, OUTPUT);
-  digitalWrite(RELAY_PIN, LOW);
-  Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
-  rtc.begin();
-  timer.setInterval(60000L, checkSchedule);
-  timer.setInterval(5000L, updateStatus);
-}
-
-void loop() {
-  Blynk.run();
-  timer.run();
-}
-```
+## 🗂️ Struktur File
