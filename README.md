@@ -45,3 +45,40 @@ Proyek ini dibuat untuk:
 ├── README.md                    # Deskripsi dan dokumentasi proyek  
 └── LICENSE                      # Lisensi proyek  
 ```
+
+---
+
+## ▶️ Cara Menggunakan Program
+
+1. Buka `src/home_automation.ino` di Arduino IDE
+2. Pilih board dan port yang sesuai 
+3. Sambungkan perangkat ke komputer dan upload program
+4. Sistem siap digunakan sesuai wiring dan fungsionalitas
+
+---
+
+## 🖼️ Dokumentasi Visual
+
+![Foto alat](assets/alat.jpg)  
+
+---
+
+## ✍️ Anggota Kelompok
+
+- Bayu arga nugraha     (2425254295)
+- Ayubi Juliansyah      (2425254294)
+- noval novriansah      (2425254315)
+- geisan ajril al kahfi (2425254301)
+- Khaerul tamami        (2425254306)
+
+---
+
+## 📄 Catatan Tambahan
+
+Proyek ini dikembangkan sepenuhnya oleh siswa sebagai bentuk tugas praktik akhir. Diharapkan sistem ini bisa terus dikembangkan lebih lanjut dengan menambahkan sensor dan fitur IoT lainnya.
+
+---
+
+## 📃 Lisensi
+
+Repositori ini disediakan untuk keperluan pendidikan. Penggunaan ulang diperbolehkan dengan mencantumkan sumber.
