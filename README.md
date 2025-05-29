@@ -28,7 +28,7 @@ Proyek ini dibuat untuk:
 - Kontrol otomatis dan manual perangkat seperti lampu
 - Penggunaan modul relay sebagai saklar elektronik
 - Potensi integrasi dengan aplikasi kontrol jarak jauh (seperti Blynk)
-- Otomatisasi berdasarkan waktu atau kondisi (jika menggunakan sensor)
+- Otomatisasi berdasarkan waktu atau kondisi 
 
 ---
 
