@@ -75,7 +75,7 @@ Proyek ini dibuat untuk:
 
 ## 📄 Catatan Tambahan
 
-Proyek ini dikembangkan sepenuhnya oleh siswa sebagai bentuk tugas praktik akhir. Diharapkan sistem ini bisa terus dikembangkan lebih lanjut dengan menambahkan sensor dan fitur IoT lainnya.
+Proyek ini dikembangkan sepenuhnya oleh siswa sebagai bentuk tugas projek. Diharapkan sistem ini bisa terus dikembangkan lebih lanjut dengan menambahkan sensor dan fitur IoT lainnya.
 
 ---
 
