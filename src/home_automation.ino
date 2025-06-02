@@ -60,7 +60,7 @@ void updateStatus() {
   String modeText = manualControl ? "Manual" : "Auto";
   String relayText = relayState ? "Relay ON" : "Relay OFF";
   Blynk.virtualWrite(V2, relayText + " (" + modeText + ")");
-  Blynk.virtualWrite(V3, relayState ? 255 : 0);
+  Blynk.virtualWrite(V3, relayState ? 1 : 0);
 }
 
 void setup() {
